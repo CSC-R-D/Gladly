@@ -169,7 +169,7 @@ let DAILY = [];  // populated from CSV on load
 
 async function loadData() {
   try {
-    const resp = await fetch('gladly-ai-data.csv');
+    const resp = await fetch('https://gpyott.github.io/Gladly-AI-Usage/gladly-ai-data.csv');
     if (!resp.ok) throw new Error('CSV not found');
     const text = await resp.text();
     const lines = text.trim().split('\n');
